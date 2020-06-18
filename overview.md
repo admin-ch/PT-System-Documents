@@ -53,3 +53,19 @@ The [Config Service](https://github.com/DP-3T/dp3t-config-backend-ch) provides c
 The batches of diagnosis keys and configuration settings are public. To help reduce the load on respectively the SwissCovid app backend Service and the Config Service, these downloads are routed through AWS Cloudfront serving as a content delivery network (CDN).
 
 None of the afore mentioned POST requests handling sensitive data are routed through the CDN, in fact, they use a different domain name with its own TLS certificate. This certificate is pinned in the SwissCovid app, ensuring that the CDN can never intercept any sensitive request.
+
+Overview of the relevant repositories
+-------------------------------------
+
+-   [HA Auth-Code Generation Service](https://github.com/admin-ch/CovidCode-Service)
+-   [HA UI](https://github.com/admin-ch/CovidCode-UI)
+-   [PTA-Backend Service](https://github.com/DP-3T/dp3t-sdk-backend)
+-   [Configuration Service](https://github.com/DP-3T/dp3t-config-backend-ch)
+-   [iOS SwissCovid App](https://github.com/DP-3T/dp3t-app-ios-ch)
+-   [iOS SwissCovid SDK](https://github.com/DP-3T/dp3t-sdk-ios)
+-   [Android SwissCovid App](https://github.com/DP-3T/dp3t-app-android-ch)
+-   [Android SwissCovid SDK](https://github.com/DP-3T/dp3t-sdk-android)
+
+Further documentation can be found in:
+
+-   [SwissCovid App UI Design](https://github.com/DP-3T/dp3t-ux-screenflows-ch)
