@@ -14,7 +14,7 @@ SwissCovid mobile applications
 
 SwissCovid provides two mobile applications:
 
--   [The Android SwissCovid App](https://github.com/DP-3T/dp3t-app-android-ch) Internally, this app uses the [DP3T SDK for Android](https://github.com/DP-3T/dp3t-sdk-android) to handle the low-level interactions with the GAEN API.
+-   [Android SwissCovid App](https://github.com/DP-3T/dp3t-app-android-ch) Internally, this app uses the [DP3T SDK for Android](https://github.com/DP-3T/dp3t-sdk-android) to handle the low-level interactions with the GAEN API.
 -   [iOS SwissCovid App](https://github.com/DP-3T/dp3t-app-ios-ch) Internally, this app uses the [DP3T SDK for iOS](https://github.com/DP-3T/dp3t-sdk-ios) to handle low-level interactions with the GAEN API.
 
 We refer to the [UI descriptions](https://github.com/DP-3T/dp3t-ux-screenflows-ch) for an overview of the main screens and user-interactions.
