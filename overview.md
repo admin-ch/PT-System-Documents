@@ -59,7 +59,7 @@ Overview of the relevant repositories
 
 -   [HA Auth-Code Generation Service](https://github.com/admin-ch/CovidCode-Service)
 -   [HA UI](https://github.com/admin-ch/CovidCode-UI)
--   [PTA-Backend Service](https://github.com/DP-3T/dp3t-sdk-backend)
+-   [SwissCovid app backend Service](https://github.com/DP-3T/dp3t-sdk-backend)
 -   [Configuration Service](https://github.com/DP-3T/dp3t-config-backend-ch)
 -   [iOS SwissCovid App](https://github.com/DP-3T/dp3t-app-ios-ch)
 -   [iOS SwissCovid SDK](https://github.com/DP-3T/dp3t-sdk-ios)
