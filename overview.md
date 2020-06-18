@@ -27,4 +27,15 @@ Apps make fake requests to both backends to hide from network observers whether 
 
 Every 6 hours (and at app start), apps retrieve a new configuration from the Config server.
 
+SwissCovid backend infrastructure
+---------------------------------
 
+The SwissCovid backend infrastructure operates three services: the HA Auth-Code Generation Service, the SwissCovid app backend service, and the Config service.
+
+### Health Authority Side (black)
+
+The [HA Auth-Code Generation Service](https://github.com/admin-ch/CovidCode-Service) is responsible for generating and validating 12-digit Covidcodes. Doctors interact with this backend service using a [website/UI](https://github.com/admin-ch/CovidCode-UI/) to request Covidcodes for their patients. Doctors use government IAM (eIAM) service to authenticate themselves to the HA Auth-Code generation Service.
+
+The HA Auth-Code Generation Service temporarily stores generated Covidcodes and the corresponding onset dates in a database. After the user entered their Covidcode into the SwissCovid app, the app makes a POST request to the HA Auth-Code Generation Service to validate the code. If the code is valid, the backend returns a signed JWT token to the SwissCovid app. The JWT contains the onset date.
+
+To enable the use of fake actions, the HA Auth-Code Generation Service accept POST requests with fake COVID Codes. It handles them exactly the same as real requests, but returns a signed JWT token that is also marked as fake.
