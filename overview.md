@@ -10,7 +10,7 @@ To enable exposure computation, the GAEN API requires a list of diagnosis keys c
 The backend infrastructure consists of two major backends. The SwissCovid app backend receives authenticated diagnosis keys from SwissCovid apps, and publishes diagnosis keys for download by other apps. The Health Authority (HA) Auth-Code Generation Service authenticates uploads of diagnosis keys by COVID-19 positive users upon authorization from a health official. Finally, the infrastructure also provides a Config Service to enable pushing new configurations to SwissCovid apps.
 
 ![Big Picture](/images/big_picture_v2.png)
-*PT-S Architecture Overview*
+*Fig 1: PT-S Architecture Overview*
 
 SwissCovid mobile applications
 ------------------------------
@@ -56,6 +56,11 @@ The [Config Service](https://github.com/DP-3T/dp3t-config-backend-ch) provides c
 The batches of diagnosis keys and configuration settings are public. To help reduce the load on respectively the SwissCovid app backend Service and the Config Service, these downloads are routed through AWS Cloudfront serving as a content delivery network (CDN).
 
 None of the afore mentioned POST requests handling sensitive data are routed through the CDN, in fact, they use a different domain name with its own TLS certificate. This certificate is pinned in the SwissCovid app, ensuring that the CDN can never intercept any sensitive request.
+
+The followin diagram gives an high level overview of the flows described above:
+
+![Big Picture](/images/covidcode_flow_v2.png)
+*Fig 2: PT-S Flows Overview*
 
 Overview of the relevant repositories
 -------------------------------------
