@@ -9,7 +9,7 @@ To enable exposure computation, the GAEN API requires a list of diagnosis keys c
 
 The backend infrastructure consists of two major backends. The SwissCovid app backend receives authenticated diagnosis keys from SwissCovid apps, and publishes diagnosis keys for download by other apps. The Health Authority (HA) Auth-Code Generation Service authenticates uploads of diagnosis keys by COVID-19 positive users upon authorization from a health official. Finally, the infrastructure also provides a Config Service to enable pushing new configurations to SwissCovid apps.
 
-[Big Picture](/images/big_picture_v2.png)
+![Big Picture](/images/big_picture_v2.png)
 
 SwissCovid mobile applications
 ------------------------------
