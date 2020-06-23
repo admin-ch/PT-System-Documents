@@ -9,6 +9,8 @@ To enable exposure computation, the GAEN API requires a list of diagnosis keys c
 
 The backend infrastructure consists of two major backends. The SwissCovid app backend receives authenticated diagnosis keys from SwissCovid apps, and publishes diagnosis keys for download by other apps. The Health Authority (HA) Auth-Code Generation Service authenticates uploads of diagnosis keys by COVID-19 positive users upon authorization from a health official. Finally, the infrastructure also provides a Config Service to enable pushing new configurations to SwissCovid apps.
 
+The KPI-Collector Service (Key Performance Indicator) is not a functional part of the PT-System but belongs to the monitoring infrastructure for the system. It collects aggregated data like download numbers of Google/Apple and how many Covidcodes were generated each day. This data is then send to a Splunk infrastructure and displayed in a management dashboard. Therefore we will not publish the source code on GitHub.
+
 ![Big Picture](/images/big_picture_v2.png)
 *Fig 1: PT-S Architecture Overview*
 
@@ -42,8 +44,6 @@ The [HA Auth-Code Generation Service](https://github.com/admin-ch/CovidCode-Serv
 The HA Auth-Code Generation Service temporarily stores generated Covidcodes and the corresponding onset dates in a database. After the user entered their Covidcode into the SwissCovid app, the app makes a POST request to the HA Auth-Code Generation Service to validate the code. If the code is valid, the backend returns a signed JWT token to the SwissCovid app. The JWT contains the onset date.
 
 To enable the use of fake actions, the HA Auth-Code Generation Service accept POST requests with fake COVID Codes. It handles them exactly the same as real requests, but returns a signed JWT token that is also marked as fake.
-
-The KPI-Collector Service (Key Performance Indicator) is not a functional part of the PT-System but belongs to the monitoring infrastructure for the system. It collects aggregated data like download numbers of Google/Apple and how many Covidcodes were generated each day. This data is then send to a Splunk infrastructure and displayed in a management dashboard. Therefore we will not publish the source code on GitHub.
 
 ### Proximity Tracing Side (red)
 
