@@ -43,6 +43,8 @@ The HA Auth-Code Generation Service temporarily stores generated Covidcodes and 
 
 To enable the use of fake actions, the HA Auth-Code Generation Service accept POST requests with fake COVID Codes. It handles them exactly the same as real requests, but returns a signed JWT token that is also marked as fake.
 
+The KPI-Collector Service (Key Performance Indicator) is not a functional part of the PT-System but belongs to the monitoring infrastructure for the system. It collects aggregated data like download numbers of Google/Apple and how many Covidcodes were generated each day. This data is then send to a Splunk infrastructure and displayed in a management dashboard. Therefore we will not publish the source code on GitHub.
+
 ### Proximity Tracing Side (red)
 
 The app then makes a POST request to the [SwissCovid app backend Service](https://github.com/DP-3T/dp3t-sdk-backend) to upload the COVID-19 positive user\'s diagnosis keys. This POST request is authenticated by the JWT token obtained from the HA Auth-Code Generation Service. The SwissCovid app backend Service stores received keys in a database.
