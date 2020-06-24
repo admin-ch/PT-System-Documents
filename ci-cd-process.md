@@ -13,12 +13,12 @@ Build Pipeline for Black Backend
 --------------------------------
 For the black backend we have a step build and deployment process with a pipeline on GitHub and other open build components (Travis-CI and SonarCloud) bound togteher with Github Actions. For security reasons - so that nobody on GitHub side can temper with the build artifacts before they are deployed to the FOITT PaaS - we clone the sourcecode from GitHub and build the artifacts again internally and also run security, regression tests and quality scans. 
 
-![CI/CD Process Black Backend](/images/cicd_black_backend.png){:height="250px"}
+![CI/CD Process Black Backend](/images/cicd_black_backend.png)
 *Fig 1: CI/CD Process Black Backend*
 
 Build Pipeline for Red Backend and Config Service
 -------------------------------------------------
 The DP3T artifacts are (red side) developed and build by Ubique in their repositories and these are used directly for the deplyoment on the FOITT PaaS as depictured on the following diagram: 
 
-![CI/CD Process Red Backend and Config Service](/images/cicd_red_backend_config.png){:height="250px"}
+![CI/CD Process Red Backend and Config Service](/images/cicd_red_backend_config.png)
 *Fig 2: CI/CD Process Red Backend and Config Service*
