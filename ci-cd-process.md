@@ -15,8 +15,8 @@ For the black backend we have a step build and deployment process with a pipelin
 
 <p align="center">
 <img src="images/cicd_black_backend.png" width="600">
-Fig 1: CI/CD Process Black Backend
 </p>
+Fig 1: CI/CD Process Black Backend
 
 CI/CD Pipeline for Black Frontend
 ---------------------------------
@@ -24,8 +24,8 @@ The black frontend is basically the same process as the backend with difference 
 
 <p align="center">
 <img src="images/cicd_black_frontend.png" width="600">
-Fig 2: CI/CD Process Black Frontend
 </p>
+Fig 2: CI/CD Process Black Frontend
 
 CI/CD Pipeline for Red Backend and Config Service
 -------------------------------------------------
@@ -33,5 +33,5 @@ The DP3T artifacts (red side) are developed and build by Ubique in their reposit
 
 <p align="center">
 <img src="images/cicd_red_backend_config.png" width="450">
-Fig 3: CI/CD Process Red Backend and Config Service
 </p>
+Fig 3: CI/CD Process Red Backend and Config Service
