@@ -9,7 +9,7 @@ As described in the [system overview](overview.md) the architecture is based on 
 
 Consequently we cannot directly deploy the artifacts in the public GitHub repositories to the Federal Office of Information Technology, Systems and Telecommunication (FOITT) PaaS platform but we have to pull either the code or the build artifacts and then deploy it from our internal infrastructure.
 
-Build Pipeline for Black Backend
+CI/CD Pipeline for Black Backend
 --------------------------------
 For the black backend we have a step build and deployment process with a pipeline on GitHub and other open build components (Travis-CI and SonarCloud) bound togteher with Github Actions. For security reasons - so that nobody on GitHub side can temper with the build artifacts before they are deployed to the FOITT PaaS - we clone the sourcecode from GitHub and build the artifacts again internally and also run security, regression tests and quality scans. 
 
@@ -18,11 +18,20 @@ For the black backend we have a step build and deployment process with a pipelin
 Fig 1: CI/CD Process Black Backend
 </p>
 
-Build Pipeline for Red Backend and Config Service
+CI/CD Pipeline for Black Frontend
+---------------------------------
+The black frontend is basically the same process as the backend with difference that here we only have static files so we did not mirror the build process with the open build components of the black backend.
+
+<p align="center">
+<img src="images/cicd_black_frontend.png" width="600">
+Fig 2: CI/CD Process Black Frontend
+</p>
+
+CI/CD Pipeline for Red Backend and Config Service
 -------------------------------------------------
 The DP3T artifacts are (red side) developed and build by Ubique in their repositories and these are used directly for the deplyoment on the FOITT PaaS as depictured on the following diagram: 
 
 <p align="center">
-<img src="images/cicd_red_backend_config.png" width="400">
-Fig 2: CI/CD Process Red Backend and Config Service
+<img src="images/cicd_red_backend_config.png" width="450">
+Fig 3: CI/CD Process Red Backend and Config Service
 </p>
