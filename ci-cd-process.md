@@ -22,5 +22,7 @@ Build Pipeline for Red Backend and Config Service
 -------------------------------------------------
 The DP3T artifacts are (red side) developed and build by Ubique in their repositories and these are used directly for the deplyoment on the FOITT PaaS as depictured on the following diagram: 
 
-![CI/CD Process Red Backend and Config Service](/images/cicd_red_backend_config.png)
-*Fig 2: CI/CD Process Red Backend and Config Service*
+<p align="center">
+<img src="images/cicd_red_backend_config.png" width="600">
+Fig 2: CI/CD Process Red Backend and Config Service
+</p>
