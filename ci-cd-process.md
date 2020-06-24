@@ -1,7 +1,6 @@
 Overview of the CI/CD Process of the Swiss Proximity Tracing System (PT-S)
 ==========================================================================
-This document gives an overview over the CI/CD process used to deploy the black backend/frontend, red backend and red config service. To produce reproducible builds either the io.github.zlika maven plugin is used or a hash is computed over the static files (see the respective repositories for more details).
-
+This document gives an overview over the CI/CD process used to deploy the black [backend](https://github.com/admin-ch/CovidCode-Service)/[frontend](https://github.com/admin-ch/CovidCode-UI), [red backend](https://github.com/DP-3T/dp3t-sdk-backend) and [red config service](https://github.com/DP-3T/dp3t-config-backend-ch). To produce reproducible builds either the [io.github.zlika maven plugin](https://github.com/zlika/reproducible-build-maven-plugin) is used or a hash is computed over the static files (see the respective repositories for more details).
 
 Federal IT Steering Unit Network Policies
 -----------------------------------------
