@@ -1,13 +1,12 @@
 Overview of the CI/CD Process of the Swiss Proximity Tracing System (PT-S)
 ==========================================================================
-This document gives an overview over the CI/CD process used to deploy the red and black backends and additional services plus the black frontend. Tp produce reproducible builds either the io.github.zlika maven plugin is used or a hash is computed over the static files (see the respective repositories for more details).
-
+This document gives an overview over the CI/CD process used to deploy the black [backend](https://github.com/admin-ch/CovidCode-Service)/[frontend](https://github.com/admin-ch/CovidCode-UI), [red backend](https://github.com/DP-3T/dp3t-sdk-backend) and [red config service](https://github.com/DP-3T/dp3t-config-backend-ch). To produce reproducible builds either the [io.github.zlika maven plugin](https://github.com/zlika/reproducible-build-maven-plugin) is used or a hash is computed over the static files (see the respective repositories for more details).
 
 Federal IT Steering Unit Network Policies
 -----------------------------------------
-As described in the [system overview](overview.md) the architecture is based on the network zone policy concept of the Federal IT Steering Unit (FITSU, https://www.isb.admin.ch/) - [Official Document](https://www.isb.admin.ch/dam/isb/de/dokumente/ikt-vorgaben/sicherheit/si003/Si003-Netzwerksicherheit_in_der_Bundesverwaltung_V2-0-d.pdf.download.pdf/Si003-Netzwerksicherheit_in_der_Bundesverwaltung_V2-0-d.pdf) - as well as the access matrix - [Official Document](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/sicherheit/si002-ikt-grundschutz_in_der_bundesverwaltung.html). As a result of these policies it is not possible to deploy directly from GitHub (Internet zone) to the SSZ (Shared Server Zone) zone.
+As described in the [system overview](overview.md) the architecture is based on the network zone policy concept of the Federal IT Steering Unit (FITSU, https://www.isb.admin.ch/) - [Official Document](https://www.isb.admin.ch/dam/isb/de/dokumente/ikt-vorgaben/sicherheit/si003/Si003-Netzwerksicherheit_in_der_Bundesverwaltung_V2-0-d.pdf.download.pdf/Si003-Netzwerksicherheit_in_der_Bundesverwaltung_V2-0-d.pdf) - as well as the access matrix - [Official Document](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/sicherheit/si002-ikt-grundschutz_in_der_bundesverwaltung.html). As a result of these policies, it is not possible to deploy directly from GitHub (Internet zone) to the SSZ (Shared Server Zone) zone.
 
-Consequently we cannot directly deploy the artifacts in the public GitHub repositories to the Federal Office of Information Technology, Systems and Telecommunication (FOITT) PaaS platform but we have to pull either the code or the build artifacts and then deploy it from our internal infrastructure.
+Consequently we cannot directly deploy the artifacts in the public GitHub repositories to the Federal Office of Information Technology, Systems and Telecommunication (FOITT) PaaS platform but we have to pull either the code or the build artifacts and then deploy it from the FOITT internal infrastructure.
 
 CI/CD Pipeline for Black Backend
 --------------------------------
@@ -29,9 +28,10 @@ Fig 2: CI/CD Process Black Frontend
 
 CI/CD Pipeline for Red Backend and Config Service
 -------------------------------------------------
-The DP3T artifacts are (red side) developed and build by Ubique in their repositories and these are used directly for the deplyoment on the FOITT PaaS as depictured on the following diagram: 
+The DP3T artifacts (red side) are developed and build by Ubique in their repositories and these are used directly for the deplyoment on the FOITT PaaS as depictured on the following diagram: 
 
 <p align="center">
 <img src="images/cicd_red_backend_config.png" width="450">
 Fig 3: CI/CD Process Red Backend and Config Service
 </p>
+
