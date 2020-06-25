@@ -14,7 +14,7 @@ CI/CD Pipeline for Black Backend
 For the black backend we have a step build and deployment process with a pipeline on GitHub and other open build components (Travis-CI and SonarCloud) bound togteher with Github Actions. For security reasons - so that nobody on GitHub side can temper with the build artifacts before they are deployed to the FOITT PaaS - we clone the sourcecode from GitHub and build the artifacts again internally and also run security, regression tests and quality scans. 
 
 <p align="center">
-<img src="images/cicd_black_backend.png" width="600">
+<img src="images/cicd_black_backend_v2.png" width="600">
 Fig 1: CI/CD Process Black Backend
 </p>
 
@@ -23,7 +23,7 @@ CI/CD Pipeline for Black Frontend
 The black frontend is basically the same process as the backend with difference that here we only have static files so we did not mirror the build process with the open build components of the black backend.
 
 <p align="center">
-<img src="images/cicd_black_frontend.png" width="600">
+<img src="images/cicd_black_frontend_v2.png" width="600">
 Fig 2: CI/CD Process Black Frontend
 </p>
 
