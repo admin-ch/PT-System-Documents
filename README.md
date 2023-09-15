@@ -1,3 +1,7 @@
+⚠️ IMPORTANT UPDATE ⚠️
+
+Since 1st September 2023, the Swiss Proximity Tracing System has definitively ceased operations. Therefore, the project’s source code was archived on GitHub. It remains available as a read-only project.
+
 # Proximity Tracing System (PT-S) documents
 Documents related to proximity tracing system in Switzerland.
 
